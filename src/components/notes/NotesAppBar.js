@@ -1,6 +1,7 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import {  startSaveNote, startUploading } from '../../actions/notes'
+import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import {  startSaveNote, startUploading } from '../../actions/notes';
+import moment from 'moment';
 
 
 export const NotesAppBar = () => {
@@ -23,11 +24,17 @@ export const NotesAppBar = () => {
           dispacth( startUploading( file ) );
      }
   }
+  
+    const { date } = active;  //para sacar cuando fue creada la nota
+    const notedate = moment(date);
+  
 
+  
 
   return (
     <div className='notes__appbar'>
-        <span>18 de abril 2022 </span>
+        <span> { notedate.format('MMMM Do YYYY') } </span>
+            
 
         <input 
             id='fileSelector'

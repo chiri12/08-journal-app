@@ -12,7 +12,9 @@ export const Sidebar = () => {//aside para ponerlo a un costado
      const {  name } = useSelector(state => state.auth);
 
     const handleLogout = () => {
-        dispatch( startLogout() )
+        dispatch( startLogout() );
+       
+       
       
     }
     
