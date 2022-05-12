@@ -1,10 +1,9 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-//import validator from 'validator';
 import { Link } from 'react-router-dom';
 import {  startGoogleLogin, startLoginEmailPassword } from '../../actions/auth';
 import { useForm } from '../../hooks/useForm';
-//import { removeError, setError } from '../../actions/ui';
+
 
 
 export const LoginScreen = () => {
@@ -23,20 +22,12 @@ export const LoginScreen = () => {
    const handlelogin = (e) => {
      e.preventDefault();
      
-        dispatch(startLoginEmailPassword(email, password) );   
-   
-    
+        dispatch(startLoginEmailPassword(email, password) );        
    } 
-
-  
 
    const handleGoogleLogin = () =>{
      dispatch( startGoogleLogin() );
    }
-
-
-
-
 
   return (
     <>

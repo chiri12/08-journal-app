@@ -56,13 +56,13 @@ const [isLoggedIn, setIsLoggedIn] = useState(false);
            <Routes>
            {
              !isLoggedIn &&
-                < Route exact path="*" element={<AuthRouter />} 
+                < Route  path="*" element={<AuthRouter />} 
                   />            
            }
 
            {
              isLoggedIn &&
-             <Route exact path="/" element ={<JournalScreen />}
+             <Route  path="/" element ={<JournalScreen />}
              
              /> 
 
